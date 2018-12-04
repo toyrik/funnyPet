@@ -1,0 +1,58 @@
+.secondary-content {
+  background: #eee;
+  padding: 30px 0;
+
+  .wrapper__inner {
+    justify-content: space-between;
+  }
+  
+  h4 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-left: @offset_one_side;
+  }
+
+  form {
+    align-self: center;
+    margin-right: @offset_one_side;
+  }
+
+  input[type="email"] {
+    position: relative;
+    padding: 11px 10px;
+    border: 1px solid #ccc;
+    width: 220px;
+    margin: 0 -5px 0 0;
+  }
+
+  .btn {
+    .button-reset();
+    //   по-умолчанию для <button>, но пригодится для <a> 
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    // создаём маленькие отступы, если кнопки перенесутся на две строки 
+    margin: 2px 0;
+    // невидимая граница (понадобится для цвета при наведении/фокусе)
+    border: solid 1px transparent;
+    border-radius: 4px;
+    // размер строится из текста и отступов (без width/height)
+    padding: 0.5em 1em;
+    // убедитесь, что достаточно контраста!
+    color: #ffffff;
+    background-color: #9555af;
+
+    // олдскульный эффект «нажатия» + цветовые правки
+    &:active {
+      transform: translateY(1px);
+      filter: saturate(150%);
+   }
+
+    // инвертируем цвета при наведении
+    &:hover {
+      color: #9555af;
+      border-color: currentColor;
+      background-color: white;
+    }
+  }
+}

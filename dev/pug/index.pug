@@ -1,0 +1,30 @@
+extend layouts/main.pug
+
+block title
+  - var title = "Главная"
+
+
+block content
+
+  include ./parts/hero.pug
+
+  .wrapper
+    .wrapper__inner
+      section.main-content
+
+        .lead-in
+            h3 PSD to HTML5 &amp; CSS.
+            p.lead Хаски — довольно активная и энергичная порода собак, а потому если вы спокойный человек, старающийся оградить себя от всевозможных беспокойств и суеты, откажитесь от идеи покупки этой собаки.
+            
+        .articles
+          
+          include ./parts/articles.pug
+
+      section.widget
+        include ./parts/widget.pug
+
+
+  section.secondary-content
+    include ./parts/subscribe.pug
+
+

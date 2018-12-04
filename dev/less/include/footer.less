@@ -1,0 +1,51 @@
+.main-footer {
+  padding: 50px 0;
+  background: rgba(34, 34, 34, 1);
+  color: #fff;
+
+  .wrapper__inner{
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .logo {
+    margin-top: 10px;
+    margin-left: @offset_one_side;
+
+    &__title {
+      color: #fff;
+      vertical-align: middle;
+      font-size: 1.5rem;
+    }
+  }
+
+  .page-nav {
+    margin-right: @offset_one_side;
+
+    &__items  {
+      display: flex;
+    }
+
+    &__item:last-child {
+      
+        .page-nav__link {
+        padding-right: 0;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      font-size: 1.5rem;
+      padding: 10px;
+      color: #fff;
+
+      &:hover {
+        color: #00c0ff;
+      }
+    }
+
+    &__toggle {
+      display: none;
+    }
+  }
+}
